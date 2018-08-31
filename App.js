@@ -9,7 +9,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -24,15 +25,12 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-         Nama : Alanzahir Ray Faiq Marshall
-        </Text>
+        <Text style={styles.instructions}>Nama : Alanzahir Ray Faiq Marshall </Text> 
+        <Text style={styles.instructions}> No : 02</Text>
         <Text style={styles.instructions}>
-          No : 02
-        </Text>
-        <Text style={styles.instructions}>
-         Kelas : XI RPL 2
-        </Text>
+         Kelas : XI RPL 2 </Text>
+        <Image style={{width: 400, height: 400}} 
+        source={require('./20170524_125819.jpg')} />
       </View>
     );
   }
@@ -43,7 +41,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'black',
   },
   welcome: {
     fontSize: 20,
@@ -52,7 +50,7 @@ const styles = StyleSheet.create({
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: 'white',
     marginBottom: 5,
   },
 });
